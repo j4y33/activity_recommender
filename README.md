@@ -35,10 +35,10 @@ Expect for the test prompts I did not have time to think about a proper reward f
 ## Architecture
 ```
 User Request → Intent Parsing → Enhanced Web Search → Smart Page Analysis
-↑ ↓
+     ↑                                                               ↓
 User Feedback ← Preference Evolution ← Response Generation ← Targeted Extraction
-↑ ↓
-Context Preservation ← Detail Validation ← Sub-page Following
+                                       ↑                                                                                          ↓
+                Context Preservation ← Detail Validation ← Sub-page Following
 ```
 Enhanced Pipeline:
 1. Intent Parsing: Extract structured parameters from user query + weather with caching
