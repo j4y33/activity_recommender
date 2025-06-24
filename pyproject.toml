@@ -1,0 +1,57 @@
+[project]
+name = "activity-agent"
+version = "0.1.0"
+description = "An intelligent agent that recommends personalized physical activities"
+authors = [
+    {name = "Juliane", email = "your-email@example.com"}
+]
+dependencies = [
+    "openai>=1.0.0",
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+    "httpx>=0.25.0",
+    "python-dotenv>=1.0.0",
+    "asyncio-mqtt>=0.11.0",
+    "beautifulsoup4>=4.12.0",
+    "googlesearch-python>=1.2.0",
+    "jupyter>=1.1.1",
+    "ipykernel>=6.29.5",
+    "html2text>=2025.4.15",
+    "markdown>=3.8.2",
+    "firecrawl-py>=2.9.0",
+    "openai-agents>=0.0.19",
+    "instructor>=1.9.0",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
